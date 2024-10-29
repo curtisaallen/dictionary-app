@@ -9,12 +9,11 @@ import { WordDefinition } from "./interface/WordDefinition";
 import { NoFoundComponent } from './components/NoFoundComponent';
 
 export default function Home() {
-  const [word, setWord] = useState<WordDefinition | null>(null);
+  const [word, setWord] = useState<WordDefinition[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     fetchDefinition('keyboard')
-      .then((data) => {
-        console.log(typeof(data))
+      .then((data:any) => {
          setWord(data);
          setError(null);
       })
@@ -27,8 +26,7 @@ export default function Home() {
 const handleSearchSubmit = (value: string) => {
   console.log(value)
   fetchDefinition(value)
-  .then((data) => {
-    console.log(data)
+  .then((data:any) => {
      setWord(data);
      setError(null);
   })
