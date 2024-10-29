@@ -12,6 +12,11 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        lora: ['Lora', 'serif'],
+        inter: ['Inter', 'sans-serif'],
+        inconsolata: ['Inconsolata', 'monospace'],
+      },
     },
   },
   plugins: [],

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -15,13 +19,175 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter, sans-serif"
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.separator {
+  display: block;
+  width: 1px;
+  height: 32px;
+  background-color: #E9E9E9;
+}
+
+.custom-container {
+  max-width: 737px; 
+}
+
+.keyword p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1;
+  color: #a445ed;
+}
+
+.definition h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.definition ul {
+  margin-left: 1em;
+}
+
+.definition ul li::marker {
+  color: #a445ed;
+}
+
+.dot {
+  display: block;
+  height: 5px;
+  width: 5px;
+  color: #a445ed;
+  background: #a445ed;
+  border-radius: 100%;
+}
+
+.definition ul li {
+  font-size: 1.125rem;
+  line-height: 1.3333;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.source-link {
+  margin-left: 0 !important;
+}
+
+.source-link a {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #050505;
+}
+
+.definition h3.source-link-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #050505; 
+}
+
+.definition-example {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #757575;   
+}
+
+.peer:checked ~ .peer-checked\:bg-indigo-600 {
+  background-color: #a445ed !important;
+}
+
+
+.play-btn:hover circle {
+  fill: #a445ed;
+  opacity: .70;
+}
+
+.play-btn:hover path {
+  fill: #ffffff;
+}
+
+.error p {
+  font-size: 1.125rem;
+  line-height: 1.3333;
+  margin-top: 1.5rem;
+}
+
+.error h1 {
+  margin-top: 0.4rem;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.error h2 {
+  font-size: 4rem;
+}
+
+.theme--serif {
+  font-family: "Lora, serif" !important;
+}
+
+.theme--sans-serif {
+  font-family: "Inter, sans-serif" !important;
+}
+
+.theme--mono {
+  font-family: "Inconsolata, mono" !important;
+}
+
+.dark-theme .definition h2 {
+   color:#ffffff;
+}
+
+.dark-theme .definition h3 {
+  color:#757575;
+}
+
+.dark-theme .search input {
+  background-color: #1F1F1F;
+  border: 1px solid #1F1F1F;
+  color:#ffffff;
+}
+.search input:focus {
+  border: 2px solid #a445ed;
+}
+
+.dark-theme .source-link-title {
+  color:#ffffff !important;
+}
+.dark-theme .source-link a {
+  color:#ffffff;
+}
+
+.dark-theme  .drop-down {
+  background-color: #1f1f1f;
+  box-shadow: 0px 5px 30px #8d17e8;
+}
+.drop-down div {
+  cursor: pointer;
+}
+
+.active {
+  color: #8d17e8;
+}
+
+input:focus-visible {
+  outline: none;
 }
